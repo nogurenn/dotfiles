@@ -1,6 +1,13 @@
 export XDG_CONFIG_HOME="${HOME}/.config"
 export XDG_DATA_HOME="${HOME}/.local/share"
 
+local gnupghome="${XDG_CONFIG_HOME}/gnupg"
+if [ ! -d $gnupghome ]; then
+    echo "GNUPGHOME not detected. Setting up GNUPGHOME at ${gnupghome}"
+    mkdir -p $gnupghome
+fi
+export GNUPGHOME=$gnupghome
+
 # ShellHistory
 # Adding shhist to PATH so we can use it from Terminal
 PATH="${PATH}:/Applications/ShellHistory.app/Contents/Helpers"
