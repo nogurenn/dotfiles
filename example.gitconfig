@@ -1,0 +1,20 @@
+[user]
+	name = 
+	email = 
+	signingkey = 
+[commit]
+	gpgsign = true
+[core]
+	editor = nano -w
+[alias]
+	ci = commit
+	ca = ci --amend
+	co = checkout
+	cob = checkout -b
+	st = status -s
+	sh = stash
+	br = branch
+	ps = push
+	pl = pull
+	d = diff
+	last = log -1 HEAD
