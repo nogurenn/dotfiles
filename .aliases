@@ -1,0 +1,17 @@
+alias so='source ~/.zshrc'
+
+alias ls='ls -G'
+alias ll='ls -l'
+
+alias find='fd'
+
+alias ws='cd ~/workspace'
+alias we='cd ~/workspace/personal'
+alias wk='cd ~/workspace/work'
+
+alias ..='cd ..' # i'm sometimes lazy
+alias ...='cd ../../..' # really lazy
+alias ....='cd ../../../..' # really really lazy
+alias .....='cd ../../../../..' # not kidding
+alias .4='cd ../../../../' # if you can script it
+alias .5='cd ../../../../..' # just script it
