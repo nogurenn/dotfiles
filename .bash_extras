@@ -1,20 +1,17 @@
 # Function to generate the horizontal line with the current time
 generate_prompt_line() {
-  local time=$(date +%T)        # Get current time in HH:MM:SS format
-  local term_width=$(tput cols) # Get terminal width
+  local time=$(date +%T)         # Get current time in HH:MM:SS format
+  local term_width=${COLUMNS:-80} # Use $COLUMNS for terminal width, default to 80
   local line_width=$((term_width - ${#time} - 1)) # Adjust line width for time
   printf "%-${line_width}s %s\n" "-" "$time" | tr ' ' '-'
 }
 
-# ANSI color codes
-user_color='\[\033[1;36m\]'  # Bright Cyan for username
-host_color='\[\033[1;32m\]'  # Bright Green for hostname
-dir_color='\[\033[1;34m\]'   # Bright Blue for directory
-reset_color='\[\033[0m\]'    # Reset to default terminal color
+# ANSI color codes for styling
+user_color='\033[1;36m'  # Bright Cyan for username
+host_color='\033[1;32m'  # Bright Green for hostname
+dir_color='\033[1;34m'   # Bright Blue for directory
+reset_color='\033[0m'    # Reset to default terminal color
 
-# Prompt definition using color variables
-PS1="${user_color}\u${reset_color}@${host_color}\h${reset_color}:${dir_color}\w${reset_color}\n\$ "
-
-# Print horizontal line before each prompt
-PROMPT_COMMAND=generate_prompt_line
-
+# Prompt configuration
+PROMPT_COMMAND='generate_prompt_line' # Run before each prompt
+PS1="${user_color}\u${reset_color}@${host_color}\h${reset_color}:${dir_color}\w${reset_color}"$'\n'"\\$ "
