@@ -1,6 +1,6 @@
 alias so='source ~/.zshrc'
 
-alias ls='ls -G'
+alias ls='ls -G -a'
 alias ll='ls -l'
 
 alias find='fd'
