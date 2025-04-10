@@ -5,7 +5,7 @@ alias find='fd'
 
 alias ws='cd ~/workspace'
 alias we='cd ~/workspace/personal'
-alias tm='cd ~/workspace/tm'
+alias wk='cd ~/workspace/tm'
 
 alias ..='cd ..' # i'm sometimes lazy
 alias ...='cd ../../..' # really lazy
