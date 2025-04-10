@@ -1,0 +1,55 @@
+[diff "astextplain"]
+	textconv = astextplain
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[http]
+	sslBackend = schannel
+[core]
+	autocrlf = true
+	fscache = true
+	symlinks = false
+	sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
+[pull]
+	rebase = false
+[credential]
+	helper = manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[init]
+	defaultBranch = master
+
+[alias]
+    ci = commit
+    ca = ci --amend
+    co = checkout
+    cob = checkout -b
+    st = status
+    sh = stash
+    br = branch
+    ps = push
+    pl = pull
+    d = diff
+    last = log -1 HEAD
+
+[push]
+    default = current
+
+[gpg]
+    format = ssh
+
+[commit]
+    gpgSign = true
+
+[tag]
+    gpgSign = true
+
+[user]
+    name =
+    email =
+    signingKey = ~/.ssh/id_ed25519
+
+[includeIf "gitdir:~/workspace/work/"]
+    path = ~/workspace/work/work.gitconfig
