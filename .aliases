@@ -1,5 +1,3 @@
-alias so='source ~/.zshrc'
-
 alias ls='ls -G -a'
 alias ll='ls -l'
 
@@ -7,7 +5,7 @@ alias find='fd'
 
 alias ws='cd ~/workspace'
 alias we='cd ~/workspace/personal'
-alias wk='cd ~/workspace/work'
+alias tm='cd ~/workspace/tm'
 
 alias ..='cd ..' # i'm sometimes lazy
 alias ...='cd ../../..' # really lazy
