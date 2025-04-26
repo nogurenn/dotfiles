@@ -2,6 +2,7 @@ alias ls='ls -G -a'
 alias ll='ls -l'
 
 alias find='fd'
+alias g='git'
 
 alias ws='cd ~/workspace'
 alias we='cd ~/workspace/personal'

@@ -1,0 +1,137 @@
+{
+    "workbench.colorCustomizations": {},
+    // Golang
+    "[go]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true
+    },
+    "better-comments.highlightPlainText": true,
+    "debug.inlineValues": "on",
+    // "editor.lineNumbers": "relative",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.minimap.enabled": false,
+    // To improve performance
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+    },
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false
+    },
+    "gitlens.plusFeatures.enabled": false,
+    "go.formatTool": "goimports",
+    "go.inlayHints.constantValues": true,
+    "go.lintOnSave": "package",
+    "go.lintTool": "golangci-lint",
+    "go.toolsManagement.autoUpdate": true,
+    "gopls": {
+        "ui.semanticTokens": true
+    },
+    "lldb.launch.expressions": "native",
+    // MacOS settings
+    "lldb.library": "/Library/Developer/CommandLineTools/Library/PrivateFrameworks/LLDB.framework/Versions/A/LLDB",
+    "makefile.configureOnOpen": true,
+    "python.terminal.activateEnvironment": false,
+    // Vim
+    "security.allowedUNCHosts": [
+        "wsl.localhost"
+    ],
+    "settingsSync.ignoredExtensions": [
+        "ms-dotnettools.vscode-dotnet-runtime",
+        "ms-dotnettools.csharp"
+    ],
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "vim.easymotion": true,
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": true
+    },
+    "vim.hlsearch": true,
+    "vim.incsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "after": [
+                "<Esc>"
+            ],
+            "before": [
+                "j",
+                "j"
+            ]
+        }
+    ],
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindings": [
+        // nnoremap \\ :noh<return>
+        {
+            "before": [
+                "\\",
+                "\\"
+            ],
+            "commands": [
+                ":nohl"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "after": [
+                "d",
+                "d"
+            ],
+            "before": [
+                "<leader>",
+                "d"
+            ]
+        },
+        {
+            "before": [
+                "<C-n>"
+            ],
+            "commands": [
+                ":nohl"
+            ]
+        },
+        {
+            "before": [
+                "K"
+            ],
+            "commands": [
+                "lineBreakInsert"
+            ],
+            "silent": true
+        },
+        {
+            "before": [
+                "<C-p>"
+            ],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        }
+    ],
+    "vim.useCtrlKeys": true,
+    "vim.useSystemClipboard": true,
+    "vs-kubernetes": {
+        "crd-code-completion": "enabled"
+    },
+    "window.zoomLevel": 2,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.settings.applyToAllProfiles": [
+        "editor.formatOnSave"
+    ],
+    "notebook.lineNumbers": "on",
+    "editor.fontFamily": "'CommitMono Nerd Font Mono', Consolas, 'Courier New', monospace",
+    "editor.cursorStyle": "block",
+    "workbench.colorTheme": "Kanagawa Wave",
+}

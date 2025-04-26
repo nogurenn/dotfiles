@@ -1,0 +1,49 @@
+// Place your key bindings in this file to override the defaults
+[
+    // Swap default keybinding for toggling terminal to use alt+`
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.toggleMaximizedPanel"
+    },
+    {
+        "key": "alt+`",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    // Disable the default keybinding for the editor dictation
+    {
+        "key": "alt+`",
+        "command": "-workbench.action.editorDictation.start",
+        "when": "hasSpeechProvider && !editorReadonly && !speechToTextInProgress"
+    },
+    // Use Ctrl+n and Ctrl+p for selecting workbench action vim style
+    // Use <>.quickOpenNavigateNext and <>.quickOpenNavigatePrevious for triggering the item you stop at
+    // https://stackoverflow.com/questions/58080196/vs-code-shortcut-for-navigating-inside-command-palette-and-file-picker
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpenSelectPrevious",
+        "when": "inQuickOpen"
+    },
+    // Use tab to select the next suggestion
+    // https://stackoverflow.com/questions/48097507/visual-studio-code-use-tab-instead-of-arrow-keys-to-select-intellisense-sugge
+    // Use vscode vim instead: Ctrl + n and Ctrl + p for next and previous suggestion
+    // {
+    //     "key": "tab",
+    //     "command": "-acceptSelectedSuggestion",
+    //     "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus"
+    // },
+    // {
+    //     "key": "tab",
+    //     "command": "selectNextSuggestion",
+    //     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus && !inSnippetMode"
+    // },
+    // {
+    //     "key": "shift+tab",
+    //     "command": "selectPrevSuggestion",
+    //     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus && !inSnippetMode"
+    // }
+]
