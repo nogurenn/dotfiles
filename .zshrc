@@ -1,12 +1,8 @@
+export XDG_BIN_HOME="${HOME}/.local/bin"
+export XDG_CACHE_HOME="${HOME}/.cache"
 export XDG_CONFIG_HOME="${HOME}/.config"
 export XDG_DATA_HOME="${HOME}/.local/share"
 
-local gnupghome="${XDG_CONFIG_HOME}/gnupg"
-if [ ! -d $gnupghome ]; then
-    echo "GNUPGHOME not detected. Setting up GNUPGHOME at ${gnupghome}"
-    mkdir -p $gnupghome
-fi
-export GNUPGHOME=$gnupghome
 
 # ShellHistory
 # Adding shhist to PATH so we can use it from Terminal
@@ -42,8 +38,18 @@ fi
 
 autoload -Uz compinit && compinit
 
-# direnv
+local gnupghome="${XDG_CONFIG_HOME}/gnupg"
+if [ ! -d $gnupghome ]; then
+    echo "GNUPGHOME not detected. Setting up GNUPGHOME at ${gnupghome}"
+    mkdir -p $gnupghome
+fi
+export GNUPGHOME=$gnupghome
+
 eval "$(direnv hook zsh)"
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

@@ -1,3 +1,5 @@
+alias so='source ~/.zshrc'
+
 #export CLICOLOR=1
 #export LSCOLORS=GxFxCxDxBxegedabagaced
 
@@ -22,4 +24,5 @@ PROMPT="${user_color}%n${reset_color}@${host_color}%m${reset_color}:${dir_color}
 precmd() {
   generate_prompt_line
 }
+
 

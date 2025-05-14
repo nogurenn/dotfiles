@@ -6,6 +6,7 @@ alias g='git'
 
 alias ws='cd ~/workspace'
 alias we='cd ~/workspace/personal'
+alias dot='cd ~/workspace/personal/dotfiles'
 alias wk='cd ~/workspace/tm'
 
 alias ..='cd ..' # i'm sometimes lazy
