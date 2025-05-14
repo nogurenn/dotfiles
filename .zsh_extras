@@ -1,5 +1,5 @@
-export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
+#export CLICOLOR=1
+#export LSCOLORS=GxFxCxDxBxegedabagaced
 
 # Function to generate the horizontal line with the current time
 function generate_prompt_line {
